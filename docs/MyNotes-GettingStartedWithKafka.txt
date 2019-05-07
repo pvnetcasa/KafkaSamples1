@@ -5,9 +5,13 @@ https://docs.microsoft.com/en-us/windows/wsl/install-win10
 
               Training			     Mine
  Kafka Ver.                          2.11-0.11.0.1
- Binaries    /usr/local/bin/kafka	either /projects/kafka1/bin/kafka in codenvy, C:\ws\ij\KafkaSamples1\kafka home pc
-
-
+ Binaries    /usr/local/bin/kafka	Different per env
+                                    Codenvy:
+                                        /projects/kafka1/bin/kafka in codenvy
+                                    Home PC:
+                                        C:\ws\ij\KafkaSamples1\kafka
+                                    Ubuntu on home PC:
+                                        /mnt/c/ws/ij/KafkaSamples1/kafka
 - To start
  -Zookeeper
    $KAFKA_INSTAL_DIR/bin/zookeeper-server-start.sh $KAFKA_INSTAL_DIR/config/zookeeper.properties
