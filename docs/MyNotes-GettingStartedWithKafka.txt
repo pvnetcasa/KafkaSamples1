@@ -1,0 +1,64 @@
+
+- Differences Between Training And My Project
+
+              Training			     Mine
+ Kafka Ver.                          2.11-0.11.0.1
+ Binaries    /usr/local/bin/kafka	/projects/bin/kafka1 for codenvy, C:\ws\ij\KafkaSamples1\kafka home pc
+
+
+- To start
+ -Zookeeper
+   /projects/kafka1/bin/kafka/bin/zookeeper-server-start.sh /projects/kafka1/bin/kafka/config/zookeeper.properties
+ -Broker
+   /projects/kafka1/bin/kafka/bin/kafka-server-start.sh /projects/kafka1/bin/kafka/config/server.properties
+
+   - 3 Brokers
+    Need 3 files.
+    On the second and third file, need to change:
+        broker.id, listeners = PLAINTEXT://your.host.name:<port>, and log.dirs
+    Values need to be different from each other
+   /projects/kafka1/bin/kafka/bin/kafka-server-start.sh /projects/kafka1/bin/kafka/config/server-0.properties
+   /projects/kafka1/bin/kafka/bin/kafka-server-start.sh /projects/kafka1/bin/kafka/config/server-1.properties
+   /projects/kafka1/bin/kafka/bin/kafka-server-start.sh /projects/kafka1/bin/kafka/config/server-2.properties
+
+
+- Creating a topic
+	/projects/kafka1/bin/kafka/bin/kafka-topics.sh --create --topic my_topic --zookeeper localhost:2181 --replication-factor 1 --partitions 1
+- Creating a topic with a replication factor of 3
+    /projects/kafka1/bin/kafka/bin/kafka-topics.sh --create --topic replicated_topic --zookeeper localhost:2181 --replication-factor 3 --partitions 1
+
+- Listing topics in a cluster
+	/projects/kafka1/bin/kafka/bin/kafka-topics.sh --list  --zookeeper localhost:2181
+
+- Get info on a topic called "replicated_topic"
+    /projects/kafka1/bin/kafka/bin/kafka-topics.sh --describe --topic replicated_topic --zookeeper localhost:2181
+
+- Creating a producer my_topic and replicated_topic
+	/projects/kafka1/bin/kafka/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my_topic
+
+	/projects/kafka1/bin/kafka/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic replicated_topic
+
+- Creating the consumer
+	/projects/kafka1/bin/kafka/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic my_topic --from-beginning
+
+	/projects/kafka1/bin/kafka/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic replicated_topic --from-beginning
+
+To install telnet
+	1) sudo apt-get update
+	2) sudo apt-get install telnet
+- Get info on a topic called "replicated_topic"
+    /projects/kafka1/bin/kafka/bin/kafka-topics.sh --describe --topic replicated_topic --zookeeper localhost:2181
+
+- Creating a producer my_topic and replicated_topic
+	/projects/kafka1/bin/kafka/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic my_topic
+
+	/projects/kafka1/bin/kafka/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic replicated_topic
+
+- Creating the consumer
+	/projects/kafka1/bin/kafka/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic my_topic --from-beginning
+
+	/projects/kafka1/bin/kafka/bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic replicated_topic --from-beginning
+
+To install telnet
+	1) sudo apt-get update
+	2) sudo apt-get install telnet
