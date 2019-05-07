@@ -1,0 +1,455 @@
+[2019-04-26 20:00:00,087] FATAL  (kafka.Kafka$)
+java.io.FileNotFoundException: /projects/bin/kafka/config/server.propert (No such file or directory)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at java.io.FileInputStream.<init>(FileInputStream.java:93)
+	at org.apache.kafka.common.utils.Utils.loadProps(Utils.java:428)
+	at kafka.Kafka$.getPropsFromArgs(Kafka.scala:41)
+	at kafka.Kafka$.main(Kafka.scala:57)
+	at kafka.Kafka.main(Kafka.scala)
+[2019-04-26 20:00:52,423] INFO KafkaConfig values: 
+	advertised.host.name = null
+	advertised.listeners = null
+	advertised.port = null
+	alter.config.policy.class.name = null
+	authorizer.class.name = 
+	auto.create.topics.enable = true
+	auto.leader.rebalance.enable = true
+	background.threads = 10
+	broker.id = 0
+	broker.id.generation.enable = true
+	broker.rack = null
+	compression.type = producer
+	connections.max.idle.ms = 600000
+	controlled.shutdown.enable = true
+	controlled.shutdown.max.retries = 3
+	controlled.shutdown.retry.backoff.ms = 5000
+	controller.socket.timeout.ms = 30000
+	create.topic.policy.class.name = null
+	default.replication.factor = 1
+	delete.records.purgatory.purge.interval.requests = 1
+	delete.topic.enable = false
+	fetch.purgatory.purge.interval.requests = 1000
+	group.initial.rebalance.delay.ms = 0
+	group.max.session.timeout.ms = 300000
+	group.min.session.timeout.ms = 6000
+	host.name = 
+	inter.broker.listener.name = null
+	inter.broker.protocol.version = 0.11.0-IV2
+	leader.imbalance.check.interval.seconds = 300
+	leader.imbalance.per.broker.percentage = 10
+	listener.security.protocol.map = SSL:SSL,SASL_PLAINTEXT:SASL_PLAINTEXT,TRACE:TRACE,SASL_SSL:SASL_SSL,PLAINTEXT:PLAINTEXT
+	listeners = null
+	log.cleaner.backoff.ms = 15000
+	log.cleaner.dedupe.buffer.size = 134217728
+	log.cleaner.delete.retention.ms = 86400000
+	log.cleaner.enable = true
+	log.cleaner.io.buffer.load.factor = 0.9
+	log.cleaner.io.buffer.size = 524288
+	log.cleaner.io.max.bytes.per.second = 1.7976931348623157E308
+	log.cleaner.min.cleanable.ratio = 0.5
+	log.cleaner.min.compaction.lag.ms = 0
+	log.cleaner.threads = 1
+	log.cleanup.policy = [delete]
+	log.dir = /tmp/kafka-logs
+	log.dirs = /tmp/kafka-logs
+	log.flush.interval.messages = 9223372036854775807
+	log.flush.interval.ms = null
+	log.flush.offset.checkpoint.interval.ms = 60000
+	log.flush.scheduler.interval.ms = 9223372036854775807
+	log.flush.start.offset.checkpoint.interval.ms = 60000
+	log.index.interval.bytes = 4096
+	log.index.size.max.bytes = 10485760
+	log.message.format.version = 0.11.0-IV2
+	log.message.timestamp.difference.max.ms = 9223372036854775807
+	log.message.timestamp.type = CreateTime
+	log.preallocate = false
+	log.retention.bytes = -1
+	log.retention.check.interval.ms = 300000
+	log.retention.hours = 168
+	log.retention.minutes = null
+	log.retention.ms = null
+	log.roll.hours = 168
+	log.roll.jitter.hours = 0
+	log.roll.jitter.ms = null
+	log.roll.ms = null
+	log.segment.bytes = 1073741824
+	log.segment.delete.delay.ms = 60000
+	max.connections.per.ip = 2147483647
+	max.connections.per.ip.overrides = 
+	message.max.bytes = 1000012
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	min.insync.replicas = 1
+	num.io.threads = 8
+	num.network.threads = 3
+	num.partitions = 1
+	num.recovery.threads.per.data.dir = 1
+	num.replica.fetchers = 1
+	offset.metadata.max.bytes = 4096
+	offsets.commit.required.acks = -1
+	offsets.commit.timeout.ms = 5000
+	offsets.load.buffer.size = 5242880
+	offsets.retention.check.interval.ms = 600000
+	offsets.retention.minutes = 1440
+	offsets.topic.compression.codec = 0
+	offsets.topic.num.partitions = 50
+	offsets.topic.replication.factor = 1
+	offsets.topic.segment.bytes = 104857600
+	port = 9092
+	principal.builder.class = class org.apache.kafka.common.security.auth.DefaultPrincipalBuilder
+	producer.purgatory.purge.interval.requests = 1000
+	queued.max.requests = 500
+	quota.consumer.default = 9223372036854775807
+	quota.producer.default = 9223372036854775807
+	quota.window.num = 11
+	quota.window.size.seconds = 1
+	replica.fetch.backoff.ms = 1000
+	replica.fetch.max.bytes = 1048576
+	replica.fetch.min.bytes = 1
+	replica.fetch.response.max.bytes = 10485760
+	replica.fetch.wait.max.ms = 500
+	replica.high.watermark.checkpoint.interval.ms = 5000
+	replica.lag.time.max.ms = 10000
+	replica.socket.receive.buffer.bytes = 65536
+	replica.socket.timeout.ms = 30000
+	replication.quota.window.num = 11
+	replication.quota.window.size.seconds = 1
+	request.timeout.ms = 30000
+	reserved.broker.max.id = 1000
+	sasl.enabled.mechanisms = [GSSAPI]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.principal.to.local.rules = [DEFAULT]
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism.inter.broker.protocol = GSSAPI
+	security.inter.broker.protocol = PLAINTEXT
+	socket.receive.buffer.bytes = 102400
+	socket.request.max.bytes = 104857600
+	socket.send.buffer.bytes = 102400
+	ssl.cipher.suites = null
+	ssl.client.auth = none
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.abort.timed.out.transaction.cleanup.interval.ms = 60000
+	transaction.max.timeout.ms = 900000
+	transaction.remove.expired.transaction.cleanup.interval.ms = 3600000
+	transaction.state.log.load.buffer.size = 5242880
+	transaction.state.log.min.isr = 1
+	transaction.state.log.num.partitions = 50
+	transaction.state.log.replication.factor = 1
+	transaction.state.log.segment.bytes = 104857600
+	transactional.id.expiration.ms = 604800000
+	unclean.leader.election.enable = false
+	zookeeper.connect = localhost:2181
+	zookeeper.connection.timeout.ms = 6000
+	zookeeper.session.timeout.ms = 6000
+	zookeeper.set.acl = false
+	zookeeper.sync.time.ms = 2000
+ (kafka.server.KafkaConfig)
+[2019-04-26 20:00:52,507] INFO starting (kafka.server.KafkaServer)
+[2019-04-26 20:00:52,509] INFO Connecting to zookeeper on localhost:2181 (kafka.server.KafkaServer)
+[2019-04-26 20:00:52,533] INFO Starting ZkClient event thread. (org.I0Itec.zkclient.ZkEventThread)
+[2019-04-26 20:00:52,536] INFO Client environment:zookeeper.version=3.4.10-39d3a4f269333c922ed3db283be479f9deacaa0f, built on 03/23/2017 10:13 GMT (org.apache.zookeeper.ZooKeeper)
+[2019-04-26 20:00:52,536] INFO Client environment:host.name=dbca5d051488 (org.apache.zookeeper.ZooKeeper)
+[2019-04-26 20:00:52,536] INFO Client environment:java.version=1.8.0_45 (org.apache.zookeeper.ZooKeeper)
+[2019-04-26 20:00:52,536] INFO Client environment:java.vendor=Oracle Corporation (org.apache.zookeeper.ZooKeeper)
+[2019-04-26 20:00:52,536] INFO Client environment:java.home=/opt/jdk1.8.0_45/jre (org.apache.zookeeper.ZooKeeper)
+[2019-04-26 20:00:52,536] INFO Client environment:java.class.path=:/projects/bin/kafka/bin/../libs/aopalliance-repackaged-2.5.0-b05.jar:/projects/bin/kafka/bin/../libs/argparse4j-0.7.0.jar:/projects/bin/kafka/bin/../libs/commons-lang3-3.5.jar:/projects/bin/kafka/bin/../libs/connect-api-0.11.0.1.jar:/projects/bin/kafka/bin/../libs/connect-file-0.11.0.1.jar:/projects/bin/kafka/bin/../libs/connect-json-0.11.0.1.jar:/projects/bin/kafka/bin/../libs/connect-runtime-0.11.0.1.jar:/projects/bin/kafka/bin/../libs/connect-transforms-0.11.0.1.jar:/projects/bin/kafka/bin/../libs/guava-20.0.jar:/projects/bin/kafka/bin/../libs/hk2-api-2.5.0-b05.jar:/projects/bin/kafka/bin/../libs/hk2-locator-2.5.0-b05.jar:/projects/bin/kafka/bin/../libs/hk2-utils-2.5.0-b05.jar:/projects/bin/kafka/bin/../libs/jackson-annotations-2.8.5.jar:/projects/bin/kafka/bin/../libs/jackson-core-2.8.5.jar:/projects/bin/kafka/bin/../libs/jackson-databind-2.8.5.jar:/projects/bin/kafka/bin/../libs/jackson-jaxrs-base-2.8.5.jar:/projects/bin/kafka/bin/../libs/jackson-jaxrs-json-provider-2.8.5.jar:/projects/bin/kafka/bin/../libs/jackson-module-jaxb-annotations-2.8.5.jar:/projects/bin/kafka/bin/../libs/javassist-3.21.0-GA.jar:/projects/bin/kafka/bin/../libs/javax.annotation-api-1.2.jar:/projects/bin/kafka/bin/../libs/javax.inject-1.jar:/projects/bin/kafka/bin/../libs/javax.inject-2.5.0-b05.jar:/projects/bin/kafka/bin/../libs/javax.servlet-api-3.1.0.jar:/projects/bin/kafka/bin/../libs/javax.ws.rs-api-2.0.1.jar:/projects/bin/kafka/bin/../libs/jersey-client-2.24.jar:/projects/bin/kafka/bin/../libs/jersey-common-2.24.jar:/projects/bin/kafka/bin/../libs/jersey-container-servlet-2.24.jar:/projects/bin/kafka/bin/../libs/jersey-container-servlet-core-2.24.jar:/projects/bin/kafka/bin/../libs/jersey-guava-2.24.jar:/projects/bin/kafka/bin/../libs/jersey-media-jaxb-2.24.jar:/projects/bin/kafka/bin/../libs/jersey-server-2.24.jar:/projects/bin/kafka/bin/../libs/jetty-continuation-9.2.15.v20160210.jar:/projects/bin/kafka/bin/../libs/jetty-http-9.2.15.v20160210.jar:/projects/bin/kafka/bin/../libs/jetty-io-9.2.15.v20160210.jar:/projects/bin/kafka/bin/../libs/jetty-security-9.2.15.v20160210.jar:/projects/bin/kafka/bin/../libs/jetty-server-9.2.15.v20160210.jar:/projects/bin/kafka/bin/../libs/jetty-servlet-9.2.15.v20160210.jar:/projects/bin/kafka/bin/../libs/jetty-servlets-9.2.15.v20160210.jar:/projects/bin/kafka/bin/../libs/jetty-util-9.2.15.v20160210.jar:/projects/bin/kafka/bin/../libs/jopt-simple-5.0.3.jar:/projects/bin/kafka/bin/../libs/kafka-clients-0.11.0.1.jar:/projects/bin/kafka/bin/../libs/kafka-log4j-appender-0.11.0.1.jar:/projects/bin/kafka/bin/../libs/kafka-streams-0.11.0.1.jar:/projects/bin/kafka/bin/../libs/kafka-streams-examples-0.11.0.1.jar:/projects/bin/kafka/bin/../libs/kafka-tools-0.11.0.1.jar:/projects/bin/kafka/bin/../libs/kafka_2.11-0.11.0.1-sources.jar:/projects/bin/kafka/bin/../libs/kafka_2.11-0.11.0.1-test-sources.jar:/projects/bin/kafka/bin/../libs/kafka_2.11-0.11.0.1.jar:/projects/bin/kafka/bin/../libs/log4j-1.2.17.jar:/projects/bin/kafka/bin/../libs/lz4-1.3.0.jar:/projects/bin/kafka/bin/../libs/maven-artifact-3.5.0.jar:/projects/bin/kafka/bin/../libs/metrics-core-2.2.0.jar:/projects/bin/kafka/bin/../libs/osgi-resource-locator-1.0.1.jar:/projects/bin/kafka/bin/../libs/plexus-utils-3.0.24.jar:/projects/bin/kafka/bin/../libs/reflections-0.9.11.jar:/projects/bin/kafka/bin/../libs/rocksdbjni-5.0.1.jar:/projects/bin/kafka/bin/../libs/scala-library-2.11.11.jar:/projects/bin/kafka/bin/../libs/scala-parser-combinators_2.11-1.0.4.jar:/projects/bin/kafka/bin/../libs/slf4j-api-1.7.25.jar:/projects/bin/kafka/bin/../libs/slf4j-log4j12-1.7.25.jar:/projects/bin/kafka/bin/../libs/snappy-java-1.1.2.6.jar:/projects/bin/kafka/bin/../libs/validation-api-1.1.0.Final.jar:/projects/bin/kafka/bin/../libs/zkclient-0.10.jar:/projects/bin/kafka/bin/../libs/zookeeper-3.4.10.jar (org.apache.zookeeper.ZooKeeper)
+[2019-04-26 20:00:52,536] INFO Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib (org.apache.zookeeper.ZooKeeper)
+[2019-04-26 20:00:52,537] INFO Client environment:java.io.tmpdir=/tmp (org.apache.zookeeper.ZooKeeper)
+[2019-04-26 20:00:52,537] INFO Client environment:java.compiler=<NA> (org.apache.zookeeper.ZooKeeper)
+[2019-04-26 20:00:52,537] INFO Client environment:os.name=Linux (org.apache.zookeeper.ZooKeeper)
+[2019-04-26 20:00:52,537] INFO Client environment:os.arch=amd64 (org.apache.zookeeper.ZooKeeper)
+[2019-04-26 20:00:52,537] INFO Client environment:os.version=3.10.0-957.10.1.el7.x86_64 (org.apache.zookeeper.ZooKeeper)
+[2019-04-26 20:00:52,537] INFO Client environment:user.name=user (org.apache.zookeeper.ZooKeeper)
+[2019-04-26 20:00:52,537] INFO Client environment:user.home=/home/user (org.apache.zookeeper.ZooKeeper)
+[2019-04-26 20:00:52,537] INFO Client environment:user.dir=/ (org.apache.zookeeper.ZooKeeper)
+[2019-04-26 20:00:52,538] INFO Initiating client connection, connectString=localhost:2181 sessionTimeout=6000 watcher=org.I0Itec.zkclient.ZkClient@30ee2816 (org.apache.zookeeper.ZooKeeper)
+[2019-04-26 20:00:52,555] INFO Waiting for keeper state SyncConnected (org.I0Itec.zkclient.ZkClient)
+[2019-04-26 20:00:52,558] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:00:52,633] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:00:52,663] INFO Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x16a5b1b582f0000, negotiated timeout = 6000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:00:52,666] INFO zookeeper state changed (SyncConnected) (org.I0Itec.zkclient.ZkClient)
+[2019-04-26 20:00:52,805] INFO Cluster ID = spBkGYA9TlG_X4kAVj4z8Q (kafka.server.KafkaServer)
+[2019-04-26 20:00:52,810] WARN No meta.properties file under dir /tmp/kafka-logs/meta.properties (kafka.server.BrokerMetadataCheckpoint)
+[2019-04-26 20:00:52,855] INFO [ThrottledRequestReaper-Fetch]: Starting (kafka.server.ClientQuotaManager$ThrottledRequestReaper)
+[2019-04-26 20:00:52,856] INFO [ThrottledRequestReaper-Produce]: Starting (kafka.server.ClientQuotaManager$ThrottledRequestReaper)
+[2019-04-26 20:00:52,857] INFO [ThrottledRequestReaper-Request]: Starting (kafka.server.ClientQuotaManager$ThrottledRequestReaper)
+[2019-04-26 20:00:52,915] INFO Log directory '/tmp/kafka-logs' not found, creating it. (kafka.log.LogManager)
+[2019-04-26 20:00:52,927] INFO Loading logs. (kafka.log.LogManager)
+[2019-04-26 20:00:52,936] INFO Logs loading complete in 9 ms. (kafka.log.LogManager)
+[2019-04-26 20:00:52,998] INFO Starting log cleanup with a period of 300000 ms. (kafka.log.LogManager)
+[2019-04-26 20:00:53,000] INFO Starting log flusher with a default period of 9223372036854775807 ms. (kafka.log.LogManager)
+[2019-04-26 20:00:53,055] INFO Awaiting socket connections on 0.0.0.0:9092. (kafka.network.Acceptor)
+[2019-04-26 20:00:53,059] INFO [Socket Server on Broker 0], Started 1 acceptor threads (kafka.network.SocketServer)
+[2019-04-26 20:00:53,077] INFO [ExpirationReaper-0-Produce]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2019-04-26 20:00:53,081] INFO [ExpirationReaper-0-Fetch]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2019-04-26 20:00:53,083] INFO [ExpirationReaper-0-DeleteRecords]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2019-04-26 20:00:53,157] INFO [ExpirationReaper-0-topic]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2019-04-26 20:00:53,163] INFO [ExpirationReaper-0-Heartbeat]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2019-04-26 20:00:53,164] INFO Creating /controller (is it secure? false) (kafka.utils.ZKCheckedEphemeral)
+[2019-04-26 20:00:53,175] INFO [ExpirationReaper-0-Rebalance]: Starting (kafka.server.DelayedOperationPurgatory$ExpiredOperationReaper)
+[2019-04-26 20:00:53,179] INFO Result of znode creation is: OK (kafka.utils.ZKCheckedEphemeral)
+[2019-04-26 20:00:53,198] INFO [GroupCoordinator 0]: Starting up. (kafka.coordinator.group.GroupCoordinator)
+[2019-04-26 20:00:53,202] INFO [GroupCoordinator 0]: Startup complete. (kafka.coordinator.group.GroupCoordinator)
+[2019-04-26 20:00:53,226] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 1 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2019-04-26 20:00:53,239] INFO [ProducerId Manager 0]: Acquired new producerId block (brokerId:0,blockStartProducerId:0,blockEndProducerId:999) by writing to Zk with path version 1 (kafka.coordinator.transaction.ProducerIdManager)
+[2019-04-26 20:00:53,307] INFO [Transaction Coordinator 0]: Starting up. (kafka.coordinator.transaction.TransactionCoordinator)
+[2019-04-26 20:00:53,320] INFO [Transaction Marker Channel Manager 0]: Starting (kafka.coordinator.transaction.TransactionMarkerChannelManager)
+[2019-04-26 20:00:53,320] INFO [Transaction Coordinator 0]: Startup complete. (kafka.coordinator.transaction.TransactionCoordinator)
+[2019-04-26 20:00:53,404] INFO Will not load MX4J, mx4j-tools.jar is not in the classpath (kafka.utils.Mx4jLoader$)
+[2019-04-26 20:00:53,449] INFO Creating /brokers/ids/0 (is it secure? false) (kafka.utils.ZKCheckedEphemeral)
+[2019-04-26 20:00:53,458] INFO Result of znode creation is: OK (kafka.utils.ZKCheckedEphemeral)
+[2019-04-26 20:00:53,469] INFO Registered broker 0 at path /brokers/ids/0 with addresses: EndPoint(dbca5d051488,9092,ListenerName(PLAINTEXT),PLAINTEXT) (kafka.utils.ZkUtils)
+[2019-04-26 20:00:53,470] WARN No meta.properties file under dir /tmp/kafka-logs/meta.properties (kafka.server.BrokerMetadataCheckpoint)
+[2019-04-26 20:00:53,493] INFO Kafka version : 0.11.0.1 (org.apache.kafka.common.utils.AppInfoParser)
+[2019-04-26 20:00:53,494] INFO Kafka commitId : c2a0d5f9b1f45bf5 (org.apache.kafka.common.utils.AppInfoParser)
+[2019-04-26 20:00:53,497] INFO [Kafka Server 0], started (kafka.server.KafkaServer)
+[2019-04-26 20:10:53,201] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2019-04-26 20:13:36,501] INFO [ReplicaFetcherManager on broker 0] Removed fetcher for partitions my_topic-0 (kafka.server.ReplicaFetcherManager)
+[2019-04-26 20:13:36,622] INFO Loading producer state from offset 0 for partition my_topic-0 with message format version 2 (kafka.log.Log)
+[2019-04-26 20:13:36,649] INFO Completed load of log my_topic-0 with 1 log segments, log start offset 0 and log end offset 0 in 99 ms (kafka.log.Log)
+[2019-04-26 20:13:36,659] INFO Created log for partition [my_topic,0] in /tmp/kafka-logs with properties {compression.type -> producer, message.format.version -> 0.11.0-IV2, file.delete.delay.ms -> 60000, max.message.bytes -> 1000012, min.compaction.lag.ms -> 0, message.timestamp.type -> CreateTime, min.insync.replicas -> 1, segment.jitter.ms -> 0, preallocate -> false, min.cleanable.dirty.ratio -> 0.5, index.interval.bytes -> 4096, unclean.leader.election.enable -> false, retention.bytes -> -1, delete.retention.ms -> 86400000, cleanup.policy -> [delete], flush.ms -> 9223372036854775807, segment.ms -> 604800000, segment.bytes -> 1073741824, retention.ms -> 604800000, message.timestamp.difference.max.ms -> 9223372036854775807, segment.index.bytes -> 10485760, flush.messages -> 9223372036854775807}. (kafka.log.LogManager)
+[2019-04-26 20:13:36,663] INFO Partition [my_topic,0] on broker 0: No checkpointed highwatermark is found for partition my_topic-0 (kafka.cluster.Partition)
+[2019-04-26 20:13:36,674] INFO Replica loaded for partition my_topic-0 with initial high watermark 0 (kafka.cluster.Replica)
+[2019-04-26 20:13:36,681] INFO Partition [my_topic,0] on broker 0: my_topic-0 starts at Leader Epoch 0 from offset 0. Previous Leader Epoch was: -1 (kafka.cluster.Partition)
+[2019-04-26 20:20:53,201] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2019-04-26 20:24:04,382] INFO Updated PartitionLeaderEpoch. New: {epoch:0, offset:0}, Current: {epoch:-1, offset-1} for Partition: my_topic-0. Cache now contains 0 entries. (kafka.server.epoch.LeaderEpochFileCache)
+[2019-04-26 20:27:39,278] WARN Client session timed out, have not heard from server in 4002ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:27:39,279] INFO Client session timed out, have not heard from server in 4002ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:27:39,379] INFO zookeeper state changed (Disconnected) (org.I0Itec.zkclient.ZkClient)
+[2019-04-26 20:27:40,651] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:27:40,652] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:27:46,655] WARN Client session timed out, have not heard from server in 6003ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:27:46,656] INFO Client session timed out, have not heard from server in 6003ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:27:48,500] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:27:48,501] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:27:54,507] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:27:54,508] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:27:56,330] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:27:56,331] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:02,337] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:02,337] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:04,082] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:04,083] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:10,089] WARN Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:10,089] INFO Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:11,610] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:11,611] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:17,617] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:17,617] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:18,930] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:18,931] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:24,937] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:24,937] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:26,279] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:26,280] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:32,286] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:32,287] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:34,356] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:34,357] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:40,360] WARN Client session timed out, have not heard from server in 6002ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:40,360] INFO Client session timed out, have not heard from server in 6002ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:41,526] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:41,527] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:47,533] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:47,533] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:49,309] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:49,309] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:55,314] WARN Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:55,315] INFO Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:56,769] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:28:56,770] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:02,776] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:02,776] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:04,402] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:04,402] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:10,408] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:10,408] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:12,189] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:12,189] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:18,195] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:18,196] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:20,097] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:20,098] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:26,101] WARN Client session timed out, have not heard from server in 6003ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:26,102] INFO Client session timed out, have not heard from server in 6003ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:27,614] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:27,615] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:33,620] WARN Client session timed out, have not heard from server in 6004ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:33,620] INFO Client session timed out, have not heard from server in 6004ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:34,798] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:34,799] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:40,805] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:40,805] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:42,377] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:42,377] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:48,383] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:48,383] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:50,110] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:50,111] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:56,116] WARN Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:56,117] INFO Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:57,713] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:29:57,714] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:03,720] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:03,720] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:05,516] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:05,518] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:11,524] WARN Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:11,524] INFO Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:12,838] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:12,839] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:18,846] WARN Client session timed out, have not heard from server in 6007ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:18,846] INFO Client session timed out, have not heard from server in 6007ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:20,584] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:20,584] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:26,585] WARN Client session timed out, have not heard from server in 6001ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:26,586] INFO Client session timed out, have not heard from server in 6001ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:28,377] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:28,377] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:34,383] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:34,383] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:36,315] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:37,318] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:43,320] WARN Client session timed out, have not heard from server in 6001ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:43,320] INFO Client session timed out, have not heard from server in 6001ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:44,594] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:44,595] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:50,601] WARN Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:50,601] INFO Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:51,701] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:51,702] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:53,201] INFO [Group Metadata Manager on Broker 0]: Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2019-04-26 20:30:57,657] INFO [Kafka Server 0], shutting down (kafka.server.KafkaServer)
+[2019-04-26 20:30:57,658] INFO [Kafka Server 0], Starting controlled shutdown (kafka.server.KafkaServer)
+[2019-04-26 20:30:57,702] WARN Client session timed out, have not heard from server in 6000ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:57,702] INFO Client session timed out, have not heard from server in 6000ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:57,803] INFO Waiting for keeper state SyncConnected (org.I0Itec.zkclient.ZkClient)
+[2019-04-26 20:30:59,170] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:30:59,171] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:05,175] WARN Client session timed out, have not heard from server in 6004ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:05,176] INFO Client session timed out, have not heard from server in 6004ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:06,706] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:06,707] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:12,708] WARN Client session timed out, have not heard from server in 6000ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:12,708] INFO Client session timed out, have not heard from server in 6000ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:13,992] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:13,993] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:19,999] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:19,999] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:21,684] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:21,685] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:27,691] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:27,691] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:28,858] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:28,858] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:34,863] WARN Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:34,863] INFO Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:36,605] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:36,606] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:42,609] WARN Client session timed out, have not heard from server in 6003ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:42,609] INFO Client session timed out, have not heard from server in 6003ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:44,445] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:44,445] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:50,451] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:50,452] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:52,311] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:52,312] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:58,316] WARN Client session timed out, have not heard from server in 6004ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:58,316] INFO Client session timed out, have not heard from server in 6004ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:59,610] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:31:59,610] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:05,615] WARN Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:05,616] INFO Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:07,024] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:07,025] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:13,029] WARN Client session timed out, have not heard from server in 6004ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:13,029] INFO Client session timed out, have not heard from server in 6004ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:14,242] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:14,243] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:20,249] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:20,249] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:22,129] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:22,129] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:28,130] WARN Client session timed out, have not heard from server in 6001ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:28,130] INFO Client session timed out, have not heard from server in 6001ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:29,611] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:29,612] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:35,618] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:35,618] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:36,921] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:36,922] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:42,928] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:42,928] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:44,827] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:44,827] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:50,832] WARN Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:50,832] INFO Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:52,100] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:52,101] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:58,106] WARN Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:58,107] INFO Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:59,742] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:32:59,743] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:05,747] WARN Client session timed out, have not heard from server in 6004ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:05,747] INFO Client session timed out, have not heard from server in 6004ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:07,529] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:07,530] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:13,530] WARN Client session timed out, have not heard from server in 6000ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:13,530] INFO Client session timed out, have not heard from server in 6000ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:15,280] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:15,281] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:21,284] WARN Client session timed out, have not heard from server in 6003ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:21,285] INFO Client session timed out, have not heard from server in 6003ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:22,793] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:22,794] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:28,800] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:28,800] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:29,961] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:29,962] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:35,963] WARN Client session timed out, have not heard from server in 6001ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:35,963] INFO Client session timed out, have not heard from server in 6001ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:37,142] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:37,143] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:43,149] WARN Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:43,149] INFO Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:44,840] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:44,841] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:50,847] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:50,847] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:52,498] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:52,498] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:58,504] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:58,504] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:59,632] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:33:59,632] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:34:05,637] WARN Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:34:05,637] INFO Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:34:07,370] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:34:07,370] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:34:13,376] WARN Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:34:13,377] INFO Client session timed out, have not heard from server in 6006ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:34:14,864] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:34:14,865] INFO Socket connection established to localhost/127.0.0.1:2181, initiating session (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:34:20,870] WARN Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000 (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:34:20,870] INFO Client session timed out, have not heard from server in 6005ms for sessionid 0x16a5b1b582f0000, closing socket connection and attempting reconnect (org.apache.zookeeper.ClientCnxn)
+[2019-04-26 20:34:22,608] INFO Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error) (org.apache.zookeeper.ClientCnxn)
