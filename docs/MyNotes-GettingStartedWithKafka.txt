@@ -7,7 +7,7 @@ https://docs.microsoft.com/en-us/windows/wsl/install-win10
  Kafka Ver.                          2.11-0.11.0.1
  Binaries    /usr/local/bin/kafka	Different per env
                                     Codenvy:
-                                        /projects/kafka1/bin/kafka in codenvy
+                                        /projects/kafkasamples/kafka in codenvy
                                     Home PC:
                                         C:\ws\ij\KafkaSamples1\kafka
                                     Ubuntu on home PC:
